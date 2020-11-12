@@ -13,12 +13,17 @@ app.listen(port, () => {
   console.log(`Example app listening at: http://localhost:${port}`);
 });
 
-router.get('/json', (request, response) => {
-  console.log(request.url);
+router.get('/json/:test', (request, response) => {
+  console.log(request.params);
   response.sendFile(__dirname + '/public/json.html');
 });
 
+router.get('/city', (request, response) => {
+  console.log(request.query.test);
+});
+
 router.post('/user', (request, _response) => {
+  console.log(request);
   console.log(request.body);
   console.log(request.body.name);
   console.log(request.body.string);
