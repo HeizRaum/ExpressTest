@@ -1,0 +1,16 @@
+{
+  "name": "test0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "testServer": "node main.js & browser-sync start --proxy 'localhost:9000' --files '.'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "express": "^4.17.1"
+  }
+}
